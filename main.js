@@ -6,13 +6,12 @@ button.addEventListener("click", function() {
   var ourRequest = new XMLHttpRequest();
 
   //Get JSON information from website
-  ourRequest.open('GET', 'TA00011.json', true);
+  ourRequest.open('GET', 'https://learnwebcode.github.io/json-example/animals-' + count + '.json');
 
   //What will happen on the website when the information is received
   ourRequest.onload = function() {
     var ourData = JSON.parse(ourRequest.responseText); //Make the text-file an actual json file, so we can work with objects
-    console.log(ourData);
-    //renderHTML(ourData);
+    renderHTML(ourData);
   };
 
   //Sending the request
