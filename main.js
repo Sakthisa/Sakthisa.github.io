@@ -11,7 +11,7 @@ function validate(){
 
 function ajax1(){
         return $.ajax({
-                url: "http://localhost:8080/api/raw_data",
+                url: "/api/raw_data",
                 type: 'GET',
                 dataType: 'json', // added data type
                 // success: function(res) {
@@ -22,7 +22,7 @@ function ajax1(){
 
 function ajax2(){
       return $.ajax({
-                  url: "http://localhost:8080/api/fault_data",
+                  url: "/api/fault_data",
                   type: 'GET',
                   dataType: 'json', // added data type
                   // success: function(res) {
