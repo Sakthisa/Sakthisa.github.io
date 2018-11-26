@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<htmL>
+  <head>
+    <title>TAHMO User Interface</title>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link rel = "stylesheet" href = "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel = "stylesheet" href = "style.css" />
+    <script src="./node_modules/hammerjs/hammer.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.5/chartjs-plugin-annotation.js"></script>
+    <script src="./node_modules/chartjs-plugin-zoom/chartjs-plugin-zoom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id = "container">
+      <h2>Station: TA00011</h2>
+      <canvas id = "myChart"></canvas>
+    </div>
+    <div class="validate">
+      <label for="Sensor">Sensor</label>
+      <select id="Sensor" name="Sensor">
+        <option value="wg">Wind Gusts</option>
+        <option value="wd">Wind Direction</option>
+        <option value="ws">Wind Speed</option>
+        <option value="te">Temperature</option>
+        <option value="ap">Atmospheric Pressure</option>
+        <option value="rh">Relative Humidity</option>
+        <option value="ra">Radiation</option>
+        <option value="vp">Vapor Pressure</option>
+        <option value="ec">Electrical Conductivity</option>
+        <option value="pr">Precipitation</option>
+      </select>
+      <button id = "validate" onclick = "addnew()">click me</button>
+
+    </div>
+    <h3>Ticket</h3>
+    <div class="ticket">
+      <form action="/test" method="post">
+        <label for="S-type">Sensor Type</label>
+        <select id="S-type" name="S-type">
+          <option value="wg">Wind Gust</option>
+          <option value="wd">Wind Direction</option>
+        </select>
+
+        <label for="Quality">Quality</label>
+        <select id="Quality" name="Quality">
+          <option value="erroneous">Erroneous</option>
+          <option value="doubtful">Doubtful</option>
+        </select>
+
+        <label for="Before">Date</label>
+        <select id="Before" name="Before">
+
+        </select>
+
+        <p>
+          to
+        </p>
+
+        <select id="After" name="After">
+
+        </select>
+
+        <label for="Severity">Severity</label>
+        <select id="Severity" name="Severity">
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+
+        <label for="subject">Extra Information</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+      </form>
+      <button id="myBtn">Submit</button>
+      <label for="subjectNew">Ticket Message</label>
+      <textarea id="subjectNew" name="subject" style="height:200px">
+
+      </textarea>
+
+      <form action="/test" method="get">
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" />
+
+        <input type="submit" value="Send message" onclick = "stay()" />
+
+    </fieldset>
+</form>
+
+    </div>
+
+        <script src="main.js"></script>
+  </body>
+</htmL>
