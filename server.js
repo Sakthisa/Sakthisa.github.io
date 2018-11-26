@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var path = require('path');
+var port = process.env.PORT || 8080;
 var json;
 
 var http = require("https");
@@ -47,7 +48,7 @@ app.get('/api/raw_data', function(req, res) {
 
 app.get("/", function(req, res){
   res.render("index");
-})
+});
 
 
 app.get('/api/fault_data', function(req, response) {
@@ -84,5 +85,6 @@ app.get('/api/fault_data', function(req, response) {
 
 // res.writeHead(200, {'Content-Type': 'application/json'});
 // res.end(JSON.stringify(body.toString()));
-console.log("Server listening on port 8080");
-app.listen(8080)
+app.listen(port, function(){
+  console.log("App running");
+})
