@@ -2,7 +2,7 @@
   "name": "fault-inbox",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "server.js",
   "dependencies": {
     "chart.js": "^2.7.3",
     "chartjs-plugin-annotation": "^0.5.7",
