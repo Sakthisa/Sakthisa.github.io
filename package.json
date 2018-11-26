@@ -1,0 +1,29 @@
+{
+  "name": "fault-inbox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "chart.js": "^2.7.3",
+    "chartjs-plugin-annotation": "^0.5.7",
+    "chartjs-plugin-zoom": "^0.6.5",
+    "express": "^4.16.4",
+    "http-server": "^0.11.1",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sakthisa/Sakthisa.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sakthisa/Sakthisa.github.io/issues"
+  },
+  "homepage": "https://github.com/Sakthisa/Sakthisa.github.io#readme"
+}
