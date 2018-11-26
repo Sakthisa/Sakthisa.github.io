@@ -22,9 +22,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('./'));
 
-app.get('/test', function(req, res) {
-    res.send('You sent the name "' + req.body.name + '".');
-});
 // // viewed at http://localhost:8080
 app.get('/api/raw_data', function(req, res) {
     var req = http.request(options, function (response) {
@@ -47,6 +44,10 @@ app.get('/api/raw_data', function(req, res) {
     req.end();
 });
 
+
+app.get("/", function(req, res){
+  res.render("index");
+})
 
 
 app.get('/api/fault_data', function(req, response) {
